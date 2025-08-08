@@ -49,7 +49,7 @@ function TypesPhilosophy() {
         <p className="text-sm font-medium">
           <span className="inline-flex items-center gap-2">
             <Sparkles className="w-4 h-4" />
-            This dossier was created by AI using models o3-pro and Claude 4.1 for code generation
+            This content was generated with AI using models OpenAI o3-pro and Claude 4
             <Sparkles className="w-4 h-4" />
           </span>
         </p>
@@ -447,20 +447,20 @@ function StaticVsDynamic() {
         <h3 className="text-xl font-bold text-black dark:text-white mb-4 text-center">The Middle Path: Gradual Typing</h3>
         <div className="flex items-center justify-center gap-8">
           <div className="text-center">
-            <div className="w-16 h-16 bg-pacific-cyan rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg">
-              <span className="text-white font-bold text-xl">TS</span>
+            <div className="w-16 h-16 bg-pacific-cyan rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg" style={{ backgroundColor: '#31afd4' }}>
+              <span className="text-white font-bold text-xl" style={{ color: 'white' }}>TS</span>
             </div>
             <span className="text-sm text-black-600 dark:text-gray-400 font-semibold">TypeScript</span>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-cordovan rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg">
-              <span className="text-white font-bold text-xl">Py</span>
+            <div className="w-16 h-16 bg-cordovan rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg" style={{ backgroundColor: '#902d41' }}>
+              <span className="text-white font-bold text-xl" style={{ color: 'white' }}>Py</span>
             </div>
             <span className="text-sm text-black-600 dark:text-gray-400 font-semibold">Python + Mypy</span>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-rose-custom rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg">
-              <span className="text-white font-bold text-xl">Rb</span>
+            <div className="w-16 h-16 bg-rose-custom rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg" style={{ backgroundColor: '#ff007f' }}>
+              <span className="text-white font-bold text-xl" style={{ color: 'white' }}>Rb</span>
             </div>
             <span className="text-sm text-black-600 dark:text-gray-400 font-semibold">Ruby + Sorbet</span>
           </div>
@@ -485,39 +485,39 @@ function ManagingComplexity() {
             icon: "📝",
             description: "Types act as compiler-enforced documentation",
             example: "function processOrder(order: Order): Price",
-            color: "violet"
+            color: "risd-blue"
           },
           {
             title: "Correctness and Constraint",
             icon: "🛡️",
             description: "Make illegal states unrepresentable",
             example: "type State = 'pending' | 'approved' | 'rejected'",
-            color: "emerald"
+            color: "pacific-cyan"
           },
           {
             title: "Modularity and Abstraction",
             icon: "🧩",
             description: "Hide implementation behind type interfaces",
             example: "interface Graph<T> { addNode(node: T): void }",
-            color: "amber"
+            color: "cordovan"
           },
           {
             title: "Expressiveness and Modeling",
             icon: "🎨",
             description: "Capture nuanced domain relationships",
             example: "type NonEmptyList<T> = [T, ...T[]]",
-            color: "rose"
+            color: "rose-custom"
           }
         ].map((item) => (
-          <div key={item.title} className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-xl transition-all hover:scale-105 border border-stone-200 dark:border-slate-700">
+          <div key={item.title} className="bg-white dark:bg-black-800 rounded-xl p-6 shadow-md hover:shadow-xl transition-all hover:scale-105 border border-gray-200 dark:border-black-700">
             <div className="flex items-start gap-4">
               <span className="text-3xl">{item.icon}</span>
               <div className="flex-1">
-                <h3 className={`text-lg font-bold text-slate-900 dark:text-white mb-2`}>
-                  <span className={`text-${item.color}-600 dark:text-${item.color}-400`}>{item.title.split(' ')[0]}</span> {item.title.split(' ').slice(1).join(' ')}
+                <h3 className={`text-lg font-bold text-black dark:text-white mb-2`}>
+                  <span className={`text-${item.color}`}>{item.title.split(' ')[0]}</span> {item.title.split(' ').slice(1).join(' ')}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">{item.description}</p>
-                <code className={`text-xs bg-stone-100 dark:bg-slate-900 px-2 py-1 rounded-lg font-mono text-${item.color}-600 dark:text-${item.color}-400`}>
+                <p className="text-sm text-black-600 dark:text-gray-400 mb-3">{item.description}</p>
+                <code className={`text-xs bg-gray-100 dark:bg-black-900 px-2 py-1 rounded-lg font-mono text-${item.color}`}>
                   {item.example}
                 </code>
               </div>
@@ -526,9 +526,9 @@ function ManagingComplexity() {
         ))}
       </div>
 
-      <blockquote className="border-l-4 border-cyan-500 text-xl italic pl-6 my-6 bg-white dark:bg-slate-800 rounded-r-xl py-4">
-        <p className="text-slate-800 dark:text-slate-200">
-          "Use your <span className="text-cyan-600 dark:text-cyan-400 font-semibold">type system</span>; write <span className="text-emerald-600 dark:text-emerald-400 font-semibold">less code</span>. By making the machine enforce certain truths, we write fewer tests for trivial conditions."
+      <blockquote className="border-l-4 border-pacific-cyan text-xl italic pl-6 my-6 bg-white dark:bg-black-800 rounded-r-xl py-4">
+        <p className="text-black-800 dark:text-gray-200">
+          "Use your <span className="text-pacific-cyan font-semibold">type system</span>; write <span className="text-pacific-cyan-600 font-semibold">less code</span>. By making the machine enforce certain truths, we write fewer tests for trivial conditions."
         </p>
       </blockquote>
     </div>
@@ -606,30 +606,30 @@ function Conclusion() {
           Type theory began as a quest to bring <span className="text-risd-blue font-semibold">order to the foundations</span> of mathematics; today, its legacy lives on in the type systems that bring order to <span className="text-pacific-cyan font-semibold">large software systems</span>. We have seen how giants like <span className="text-risd-blue-600 font-semibold">Church</span> and <span className="text-rose-custom font-semibold">Curry</span> contributed ideas that bridge logic and programming.
         </p>
 
-        <div className="bg-risd-blue rounded-xl p-8 my-8 text-white">
-          <h3 className="text-2xl font-bold mb-4">Key Takeaways</h3>
+        <div className="bg-risd-blue rounded-xl p-8 my-8 text-white" style={{ backgroundColor: '#004fff', color: 'white' }}>
+          <h3 className="text-2xl font-bold mb-4" style={{ color: 'white' }}>Key Takeaways</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-bold mb-2 text-pacific-cyan-200">Types as Hypothesis</h4>
-              <p className="text-sm opacity-90">
+              <h4 className="font-bold mb-2 text-pacific-cyan-200" style={{ color: '#83cee5' }}>Types as Hypothesis</h4>
+              <p className="text-sm opacity-90" style={{ color: 'white', opacity: 0.9 }}>
                 A type can be thought of as a hypothesis about the nature of things – a hypothesis the compiler will fiercely test.
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-2 text-rose-custom-200">Types as Tools</h4>
-              <p className="text-sm opacity-90">
+              <h4 className="font-bold mb-2 text-rose-custom-200" style={{ color: '#ff99cc' }}>Types as Tools</h4>
+              <p className="text-sm opacity-90" style={{ color: 'white', opacity: 0.9 }}>
                 They help us carve nature at its joints and manage the immense complexity of modern software.
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-2 text-cordovan-200">Types as Communication</h4>
-              <p className="text-sm opacity-90">
+              <h4 className="font-bold mb-2 text-cordovan-200" style={{ color: '#d16c81' }}>Types as Communication</h4>
+              <p className="text-sm opacity-90" style={{ color: 'white', opacity: 0.9 }}>
                 They act as contracts, documentation, constraints, and enablers.
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-2 text-pacific-cyan-300">Types as Philosophy</h4>
-              <p className="text-sm opacity-90">
+              <h4 className="font-bold mb-2 text-pacific-cyan-300" style={{ color: '#5abedc' }}>Types as Philosophy</h4>
+              <p className="text-sm opacity-90" style={{ color: 'white', opacity: 0.9 }}>
                 They prompt us to ask: "What am I really assuming here? What are the essential properties?"
               </p>
             </div>
